@@ -40,9 +40,6 @@ install:
   - git clone https://github.com/ingo/titanium_build.git "$SDKS/titanium_build" 
   - ls "$SDKS/titanium_build"
   -
-  - sudo easy_install pyyaml
-  - sudo easy_install Pygments
-  -
   - export ANDROID_PLATFORM=$ANDROID_SDK/platforms/android-$TITANIUM_ANDROID_API
   - export GOOGLE_APIS=$ANDROID_SDK/add-ons/addon-google_apis-google-$TITANIUM_ANDROID_API
 
