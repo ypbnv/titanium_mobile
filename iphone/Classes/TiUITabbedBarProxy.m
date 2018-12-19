@@ -1,14 +1,14 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2010 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2018-present by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  */
-#ifdef USE_TI_UIIOSTABBEDBAR
-#import "TiUIiOSTabbedBarProxy.h"
+#ifdef USE_TI_UITABBEDBAR
+#import "TiUITabbedBarProxy.h"
 #import "TiUIButtonBar.h"
 
-@implementation TiUIiOSTabbedBarProxy
+@implementation TiUITabbedBarProxy
 
 - (NSArray *)keySequence
 {
@@ -21,16 +21,13 @@
 
 - (NSString *)apiName
 {
-  return @"Ti.UI.iOS.TabbedBar";
+  return @"Ti.UI.TabbedBar";
 }
 
 - (TiUIView *)newView
 {
   TiUIButtonBar *result = [[TiUIButtonBar alloc] init];
   [result setTabbedBar:YES];
-
-  DEPRECATED_REPLACED(@"UI.iOS.TabbedBar", @"8.0.0", @"UI.TabbedBar");
-
   return result;
 }
 
