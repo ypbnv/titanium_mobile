@@ -40,39 +40,28 @@ properties:
     type: [Array<String>, Array<BarItemType>]
   - name: style
     summary: Style of the tabbed bar.
-    description: |
-        Specify one of the constants:
-        For iOS: 
-        [Titanium.UI.iOS.SystemButtonStyle](Titanium.UI.iOS.SystemButtonStyle),
-        either `PLAIN`, `BORDERED`, or `BAR`.
-        
-        The `BAR` style specifies a more compact style and allows the bar's background
-        color or gradient to show through.
-        For Android:
-        [Titanium.UI.TABS_STYLE_*]
-        In Android [style](Ti.UI.TabbedBar.style) is only supported in the creation dictionary 
-        of the proxy.
+    availability: creation
     type: Number
-    default: Titanium.UI.iOS.SystemButtonStyle.PLAIN for iOS, Ti.UI.TABS_STYLE_DEFAULT for Android
+    constants: Titanium.UI.Android.TABS_STYLE_*
+    default: Titanium.UI.Android.TABS_STYLE_DEFAULT
 examples:
   - title: Simple Tabbed Bar with 3 items
     example: |
         
-            var bb1 = Ti.UI.createTabbedBar({
-            	labels: ['One', 'Two', 'Three'],
+            var tabbedBar = Ti.UI.createTabbedBar({
+            	labels: [ 'One', 'Two', 'Three' ],
             	backgroundColor: '#336699',
-            	style: Ti.UI.iOS.SystemButtonStyle.BAR,
             	width: 200,
             	height: 25,
             	top: 50
             });
-            win.add(bb1);
+            win.add(tabbedBar);
 
   - title: TabGroup like behavior for views instead of windows
     example: |
             var win = Ti.UI.createWindow({ layout: 'vertical' });
             var tabbedBar = Ti.UI.createTabbedBar({
-                labels: ['One', 'Two', 'Three'],
+                labels: [ 'One', 'Two', 'Three' ],
                 backgroundColor: '#336699',
                 height: '10%',
                 width: Ti.UI.FILL
@@ -84,13 +73,13 @@ examples:
                 layout: 'horizontal'
             });
 
-            for (i = 0; i < tabbedBar.labels.length; i++) {
-                scrollView.add( Ti.UI.createView({ backgroundColor: '#'+Math.random().toString(16).substr(-6)}))
+            for (var i = 0; i < tabbedBar.labels.length; i++) {
+                scrollView.add(Ti.UI.createView({ backgroundColor: '#' + Math.random().toString(16).substr(-6) }));
             }
 
             tabbedBar.addEventListener('click', function(e) {
-                scrollView.scrollTo(e.index * win.rect.width, 0, {animated: true});
-            })
+                scrollView.scrollTo(e.index * win.rect.width, 0, { animated: true });
+            });
 
             win.add(scrollView);
             win.add(tabbedBar);

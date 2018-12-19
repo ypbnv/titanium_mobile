@@ -160,6 +160,7 @@
 		3A0B567B1C0CD81C00709DA4 /* TiUIiOSLivePhotoViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B56781C0CD81C00709DA4 /* TiUIiOSLivePhotoViewProxy.m */; };
 		3A0E54371BE811CD003EE654 /* TiUIiOSMenuPopupProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E54361BE811CD003EE654 /* TiUIiOSMenuPopupProxy.m */; };
 		3A1E40511BEAC73D00943233 /* TiUIiOSMenuPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E40501BEAC73D00943233 /* TiUIiOSMenuPopup.m */; };
+		3A21F5B421CA308A00B39223 /* TiUITabbedBarProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A21F5B221CA308A00B39223 /* TiUITabbedBarProxy.m */; };
 		3A275F3E1BA881B300EC4912 /* TiUIActivityIndicatorStyleProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A275F3D1BA881B300EC4912 /* TiUIActivityIndicatorStyleProxy.m */; };
 		3A3BBAF51D3E2F0F008450DF /* TiAppiOSUserNotificationCenterProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3BBAF41D3E2F0F008450DF /* TiAppiOSUserNotificationCenterProxy.m */; };
 		3A5AD7261BB9A6E4005B408B /* TiUIiOSPreviewActionGroupProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AD7251BB9A6E4005B408B /* TiUIiOSPreviewActionGroupProxy.m */; };
@@ -598,6 +599,8 @@
 		3A0E54361BE811CD003EE654 /* TiUIiOSMenuPopupProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiUIiOSMenuPopupProxy.m; sourceTree = "<group>"; };
 		3A1E404F1BEAC73D00943233 /* TiUIiOSMenuPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiUIiOSMenuPopup.h; sourceTree = "<group>"; };
 		3A1E40501BEAC73D00943233 /* TiUIiOSMenuPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiUIiOSMenuPopup.m; sourceTree = "<group>"; };
+		3A21F5B221CA308A00B39223 /* TiUITabbedBarProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiUITabbedBarProxy.m; sourceTree = "<group>"; };
+		3A21F5B321CA308A00B39223 /* TiUITabbedBarProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiUITabbedBarProxy.h; sourceTree = "<group>"; };
 		3A275F3C1BA881B300EC4912 /* TiUIActivityIndicatorStyleProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiUIActivityIndicatorStyleProxy.h; sourceTree = "<group>"; };
 		3A275F3D1BA881B300EC4912 /* TiUIActivityIndicatorStyleProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiUIActivityIndicatorStyleProxy.m; sourceTree = "<group>"; };
 		3A3BBAF31D3E2F0F008450DF /* TiAppiOSUserNotificationCenterProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiAppiOSUserNotificationCenterProxy.h; sourceTree = "<group>"; };
@@ -1191,6 +1194,7 @@
 				24CA8C6C111166BA0084E2DE /* ActivityIndicator */,
 				24CA8C6B111166B60084E2DE /* Switch */,
 				24CA8C6A111166B20084E2DE /* Slider */,
+				3A21F5B021CA301000B39223 /* TabbedBar */,
 				24CA8C69111166AB0084E2DE /* Text Widgets */,
 				24A1E872112DF7E4003DA834 /* Picker */,
 			);
@@ -1685,6 +1689,15 @@
 			name = MenuPopup;
 			sourceTree = "<group>";
 		};
+		3A21F5B021CA301000B39223 /* TabbedBar */ = {
+			isa = PBXGroup;
+			children = (
+				3A21F5B321CA308A00B39223 /* TiUITabbedBarProxy.h */,
+				3A21F5B221CA308A00B39223 /* TiUITabbedBarProxy.m */,
+			);
+			name = TabbedBar;
+			sourceTree = "<group>";
+		};
 		3A811CCD1C2C21CA0023468C /* BlurView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2144,6 +2157,7 @@
 				24CA8B95111161FE0084E2DE /* TiUIProgressBarProxy.m in Sources */,
 				24CA8B96111161FE0084E2DE /* TiUIProgressBar.m in Sources */,
 				673144D6211DBAD7001BDBF2 /* TiUIApplication.m in Sources */,
+				3A21F5B421CA308A00B39223 /* TiUITabbedBarProxy.m in Sources */,
 				24CA8B97111161FE0084E2DE /* TiUIOptionDialogProxy.m in Sources */,
 				24CA8B98111161FE0084E2DE /* TiUINavBarButton.m in Sources */,
 				24CA8B99111161FE0084E2DE /* TiUILabelProxy.m in Sources */,

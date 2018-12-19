@@ -30,6 +30,9 @@
 #ifdef USE_TI_UIATTRIBUTEDSTRING
 #import "TiUIAttributedStringProxy.h"
 #endif
+#ifdef USE_TI_UITABBEDBAR
+#import "TiUITabbedBarProxy.h"
+#endif
 #ifdef USE_TI_UITOOLBAR
 #import "TiUIToolbarProxy.h"
 #endif
@@ -256,6 +259,13 @@ MAKE_SYSTEM_PROP(LIST_ACCESSORY_TYPE_DISCLOSURE, UITableViewCellAccessoryDisclos
     }
   }
   return [[[TiAnimation alloc] _initWithPageContext:[self executionContext]] autorelease];
+}
+#endif
+
+#ifdef USE_TI_UITABBEDBAR
+- (id)createTabbedBar:(id)args
+{
+  return [[[TiUITabbedBarProxy alloc] _initWithPageContext:[self executionContext] args:args] autorelease];
 }
 #endif
 
